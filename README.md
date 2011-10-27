@@ -46,6 +46,19 @@ Cのマイクロテストフレームワーク[minunit](http://www.jera.com/tech
 3. テスト関数を呼ぶ  
 テストを行う関数をall_testsからmu_run_testを通して呼ぶ。mu_run_testに関数名を渡せばよい。
 
+4. テストを実行する
+`test.rb`を実行するといい、`sample/` 内でやってみるとわかる
+テストが失敗すると`failed assertion cubic(2) == 8`みたいな感じで教えてくれる
+
+
+中では各ソースコードに以下ようなことを繰り返してる
+
+`nkf -w --overwrite` utf8に変換  
+`gcc -fPIC -shared 0000.c -o lib0000.so` 共有ライブラリとしてコンパイル  
+`gcc test-hoge.c lib0000.so -o t-0000.c` テストコードとリンク  
+`./t-0000.c`  テスト実行
+
+
 # 他
 なんかわからないことあったら聞いてください
 
