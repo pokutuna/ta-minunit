@@ -17,7 +17,6 @@ Cのマイクロテストフレームワーク[minunit](http://www.jera.com/tech
 4. `$ ./test.rb` もしくは `$ ruby test.rb` を実行する
 
 ### ファイルごとにテストする
-4まで同じ
 `$ ./test.rb -t 0000.c` で特定のソースコードのみをコンパイル&テストする
 
 ### できたファイルを消したい時
@@ -33,21 +32,19 @@ Cのマイクロテストフレームワーク[minunit](http://www.jera.com/tech
 [sample/](https://github.com/pokutuna/ta-minunit/tree/master/sample)以下を例に説明する  
 完成するテストコードは[sample/test-T5_4.c](https://github.com/pokutuna/ta-minunit/blob/master/sample/test-T5_4.c)
 
-1. テストしたい関数のプロトタイプをかく
-例えば、"整数 x を入力（引数）とし，その3乗を計算して戻り値として返関数 int cubic(int x) を定義せよ"という問題があるとする。  
-学生の書いたコード内の int cubic(int x) を解決できるようにプロトタイプを書く。
+1. テストしたい関数のプロトタイプをかく  
+例えば、"整数 x を入力（引数）とし，その3乗を計算して戻り値として返関数 int cubic(int x) を定義せよ"という問題がある場合、学生の書いたコード内の int cubic(int x) を解決できるようにプロトタイプを書く。
 
-2. テスト関数&あさーしょんを書く
+2. テスト関数&あさーしょんを書く  
 [sample/test-T5_4.c](https://github.com/pokutuna/ta-minunit/blob/master/sample/test-T5_4.c)
 を参考にテストを行う関数を書く。  
-ここでは、test_cubic, test_cubic_edge_case の2つのテストを書いている。
-テストしたい対象・関心ごとに関数を分けるとよい
-(関数ごとにテストを分けたり、できて当然のテストと加点に値するテストを分けたり)
+ここでは、test_cubic, test_cubic_edge_case の2つのテストを書いている。  
+テストしたい対象・関心ごとに関数を分けるとよい  
+(関数ごとにテストを分けたり、できて当然のテストと加点に値するテストを分けたり)  
 関数内では、mu_assertを利用し"テストしたい関数"と"期待する値"を比較する。
 
-3. テスト関数を呼ぶ
-テストを行う関数をall_testsからmu_run_testを通して呼ぶ。
-mu_run_testに関数名を渡せばよい
+3. テスト関数を呼ぶ  
+テストを行う関数をall_testsからmu_run_testを通して呼ぶ。mu_run_testに関数名を渡せばよい。
 
 # 他
 なんかわからないことあったら聞いてください
