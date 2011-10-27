@@ -2,8 +2,8 @@
 Cのマイクロテストフレームワーク[minunit](http://www.jera.com/techinfo/jtns/jtn002.html)の拡張と、TAの採点を楽にするスクリプト
 
 - minunit.h : テストフレームワーク
-- test.rb : 共有ライブラリとしてコンパイル&テストとリンクして実行する
-- make.rb : コンパイルをする
+- test.rb : 共有ライブラリとしてコンパイル&テストとリンクして実行するスクリプト
+- make.rb : コンパイルをするスクリプト
 - test-template.c : テストコードテンプレート
 - sample/ : テストを行うディレクトリのサンプル
 - tests/ : 各問のテスト置き場
