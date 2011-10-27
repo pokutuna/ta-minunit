@@ -1,10 +1,9 @@
 #include <stdio.h>
 #include "minunit.h"
-#include "test-T5_4.h"
 
-int mu_nfail = 0;
-int mu_ntest = 0;
-int mu_nassert = 0;
+int cubic(int); // (1) テストしたい関数のプロトタイプ
+
+int mu_nfail = 0; int mu_ntest = 0; int mu_nassert = 0;
 
 static char* test_cubic()
 {
