@@ -55,8 +55,8 @@ Cのマイクロテストフレームワーク[minunit](http://www.jera.com/tech
 
 `nkf -w --overwrite` utf8に変換  
 `gcc -fPIC -shared 0000.c -o lib0000.so` 共有ライブラリとしてコンパイル  
-`gcc test-hoge.c lib0000.so -o t-0000.c` テストコードとリンク  
-`./t-0000.c`  テスト実行
+`gcc test-hoge.c lib0000.so -o t-0000` テストコードとリンク  
+`./t-0000`  テスト実行
 
 
 # 他
